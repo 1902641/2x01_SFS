@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainStage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1080" style="-fx-background-color: #96CAFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.viewStudentController">
+   <children>
+      <Pane id="dashboardPane" fx:id="dashboardPane" prefHeight="600.0" prefWidth="1080.0" style="visibility: true;">
+         <children>
+            <StackPane layoutX="257.0" prefHeight="609.0" prefWidth="823.0">
+               <children>
+                  <Pane fx:id="lViewStudentsPane" prefHeight="606.0" prefWidth="823.0" style="-fx-background-color: #FFFFFF;">
+                     <StackPane.margin>
+                        <Insets bottom="10.0" />
+                     </StackPane.margin>
+                     <children>
+                        <VBox layoutX="1.0" prefHeight="600.0" prefWidth="822.0" style="-fx-background-color: #FFFFFF;">
+                           <children>
+                              <Text id="pageHeader" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-padding: 10px; -fx-border-insets: 10px; -fx-background-insets: 10px;" text="Students' list" wrappingWidth="483">
+                                 <font>
+                                    <Font name="Arial" size="38.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="30.0" top="20.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text id="siteMap" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;View Student" wrappingWidth="429.33673095703125">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="30.0" top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Separator prefHeight="0.0" prefWidth="822.0" />
+                              <TableView fx:id="studentListTable" prefHeight="492.0" prefWidth="800.0">
+                                <columns>
+                                  <TableColumn fx:id="adminNoCol" prefWidth="150.0" text="Student ID" />
+                                  <TableColumn fx:id="fNameCol" minWidth="0.0" prefWidth="150.0" text="First Name" />
+                                    <TableColumn fx:id="lNameCol" minWidth="0.0" prefWidth="150.0" text="Last Name" />
+                                    <TableColumn fx:id="emailCol" minWidth="0.0" prefWidth="200.0" text="Email" />
+                                    <TableColumn fx:id="mobileCol" prefWidth="160.0" text="Contact Number" />
+                                </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="30.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children></Pane>
+               </children>
+            </StackPane>
+            <VBox prefHeight="600.0" prefWidth="257.0" style="-fx-background-color: #3F2B63;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="257.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/images/SIT-Primary-logo-722x407.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="welcomeBtn" mnemonicParsing="false" prefHeight="46.0" prefWidth="258.0" style="-fx-background-color: #3F2B63;" styleClass="navbut" text="Welcome, Lorem Ipsum" textFill="WHITE" />
+                  <Button id="btnHome" fx:id="btnHome" mnemonicParsing="false" onAction="#navBar" prefHeight="46.0" prefWidth="258.0" stylesheets="@/CSS/sideNav.css" text="Home" textFill="WHITE" />
+                  <Button id="btnMC" fx:id="btnManageCom" mnemonicParsing="false" onAction="#navBar" prefHeight="46.0" prefWidth="258.0" stylesheets="@/CSS/sideNav.css" text="Manage Components" textFill="WHITE" />
+                  <Button id="btnVS" fx:id="btnViewStudent" mnemonicParsing="false" onAction="#navBar" prefHeight="46.0" prefWidth="258.0" stylesheets="@/CSS/sideNav.css" text="View Students" textFill="WHITE" />
+                  <Button id="btnSO" fx:id="btnSignOut" mnemonicParsing="false" onAction="#navBar" prefHeight="46.0" prefWidth="258.0" stylesheets="@/CSS/sideNav.css" text="Sign Out" textFill="WHITE" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

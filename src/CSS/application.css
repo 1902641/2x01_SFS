@@ -1,0 +1,9 @@
+#dashboardPane{
+	visibility: hidden;
+}
+.Button{
+	-fx-background-color :  #F0F0F0;
+}
+.Button:hover{
+	-fx-background-color :  #CECECE;
+}
